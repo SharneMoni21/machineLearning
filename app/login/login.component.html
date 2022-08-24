@@ -1,0 +1,70 @@
+<div class="bg">
+  <div class="container text-center">
+    <h1 class="text-centre">Welcome to the Machine Learning Prediction Model</h1>
+    <form [formGroup]="angForm" novalidate #form>
+      <div class="form-group">
+        <label>Name:</label>
+        <input
+          class="form-control"
+          formControlName="name"
+          type="text"
+          [(ngModel)]="username"
+        />
+      </div>
+      <!-- <div>{{username}}</div> -->
+      <div
+        *ngIf="
+          angForm.controls['name'].invalid &&
+          (angForm.controls['name'].dirty || angForm.controls['name'].touched)
+        "
+        class="alert alert-danger"
+      >
+        <div *ngIf="angForm.controls['name'].errors; required">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input
+          class="form-control"
+          formControlName="password"
+          type="password"
+          [(ngModel)]="password"
+        />
+        <!-- <div>{{password}}</div> -->
+      </div>
+      <div
+        *ngIf="
+          angForm.controls['password'].invalid &&
+          (angForm.controls['password'].dirty ||
+            angForm.controls['password'].touched)
+        "
+        class="alert alert-danger"
+      >
+        <div *ngIf="angForm.controls['password'].errors; required">
+          Password is required.
+        </div>
+      </div>
+      <div class="class-container text-center">
+        <button
+          type="submit"
+          [disabled]="angForm.pristine || angForm.invalid"
+          class="btn btn-success"
+          routerLink="/dashboard"
+        >
+          Submit
+        </button>
+      </div>
+      <hr />
+      <div class="class-container text-centre">
+        <span
+          ><a href="" class="text" routerLink="/register"
+            >Register if you are new here!</a
+          ></span
+        >
+      </div>
+    </form>
+    <br />
+  </div>
+
+</div>

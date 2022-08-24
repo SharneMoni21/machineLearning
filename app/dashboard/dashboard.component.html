@@ -1,0 +1,74 @@
+<div class="bg">
+  
+
+  <div class="form">
+    <blockquote class="blockquote text-center font-weight-bold">
+        <p class="heading">Welcome to the page where you can you predict your business future</p>
+        <footer class="blockquote-footer text-info">Created by the interns of<cite title="Source Title"> Kaar Technologies</cite></footer>
+      </blockquote>
+    <hr>
+    <br>
+    <br>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Designed with the, best in class machine learning algorithm</h5>
+          <p class="card-text">Click the below button to upload your dataset</p>
+          <input class = "form-control" type="file" [accept]="'.csv'" (change)="onChange($event)">
+      <button class="btn btn-success" type="submit" (click) = "submit()"> Upload </button>
+      <div class="container text-center jumbotron"
+      *ngIf="shortLink">
+      <h2> Visit Here</h2>
+      <a href="{{shortLink}}">{{shortLink}}</a>
+      </div>
+      <div class="container" *ngIf="loading">
+      <h3>Loading ...</h3>
+      </div>
+        </div>
+      </div>
+    
+    </div>   
+
+</div>  
+
+
+<!-- <div class="form">
+<blockquote class="blockquote text-center font-weight-bold">
+    <p class="mb-0 text-primary">Welcome to the page where you can you predict your business future</p>
+    <footer class="blockquote-footer text-info">Created by the interns of<cite title="Source Title"> Kaar Technologies</cite></footer>
+  </blockquote>
+<hr>
+<br>
+<br>
+  <div class="card">
+    <h5 class="card-header">Upload Your Sales Dataset</h5>
+    <div class="card-body">
+      <h5 class="card-title">Designed with best in class machine learning algorithm</h5>
+      <p class="card-text">Click the below button to upload your dataset</p>
+      <input type="file" id="myfile" name="myfile" />
+      <a href="#" class="btn btn-primary">Submit</a>
+    </div>
+  </div>
+
+</div>   -->
+
+<!-- <form [formGroup] = "form"> -->
+  <!-- <h1> Dataset Uploading page </h1>
+                                                
+  <input class = "form-control" type="file" [accept]="'.csv'" (change)="onChange($event)">
+  <button class="btn btn-success" type="submit" (click) = "submit()"> Upload </button>  -->
+
+  <!-- Shareable short link of  uoloaded file -->
+  <!-- <div class="container text-center jumbotron" *ngIf="shortLink">
+  <h2> Visit Here</h2>
+  <a href="{{shortLink}}">{{shortLink}}</a>
+  </div> -->
+
+  <!--Flag variable is used here-->
+  <!-- <div class="container" *ngIf="loading">
+  <h3>Loading ...</h3>
+  </div> -->
+<!-- </form> -->
+
+
+<!-- <input type="file" (change)="onFileSelected($event)">
+<input type="button" value="file upload"> -->
